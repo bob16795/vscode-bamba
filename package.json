@@ -1,0 +1,38 @@
+{
+    "name": "bamba-lang",
+    "displayName": "Bamba Lang",
+    "description": "Support for the bamba language",
+    "version": "0.0.1",
+    "publisher": "prestosilver",
+    "repository": {
+        "url": "https://github.com/bob16795/vscode-bamba"
+    },
+    "engines": {
+        "vscode": "^1.83.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "bamba",
+                "aliases": [
+                    "Bamba",
+                    "bamba"
+                ],
+                "extensions": [
+                    ".bam"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "bamba",
+                "scopeName": "source.bamba",
+                "path": "./syntaxes/bamba.tmLanguage.json"
+            }
+        ]
+    }
+}

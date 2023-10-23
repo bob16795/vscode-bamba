@@ -1,0 +1,76 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Bamba",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#chars"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.bamba",
+                    "match": "\\b(comptime|return|extern|import|break|class|entry|embed|const|while|emit|prop|else|drop|pub|def|for|if|fn|in)\\b"
+                },
+                {
+                    "name": "entity.name.type.bamba",
+                    "match": "\\b(i|u|f)\\d+\\b"
+                },
+                {
+                    "name": "constant.numeric.bamba",
+                    "match": "\\b\\d+\\b"
+                },
+                {
+                    "name": "keyword.operator.new.bamba",
+                    "match": "\\bnew\\b"
+                },
+                {
+                    "name": "keyword.builtin.bamba",
+                    "match": "@\\w+\\b"
+                },
+                {
+                    "name": "entity.name.method.bamba",
+                    "match": "#\\w+\\b"
+                }
+            ]
+        },
+        "comments": {
+            "name": "comment.line.double-slash",
+            "begin": "//",
+            "end": "\n"
+        },
+        "chars": {
+            "name": "string.quoted.single.bamba",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.bamba",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.bamba",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.bamba",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.bamba"
+}
