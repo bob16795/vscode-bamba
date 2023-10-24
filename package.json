@@ -8,7 +8,7 @@
         "url": "https://github.com/bob16795/vscode-bamba"
     },
     "engines": {
-        "vscode": "^1.83.0"
+        "vscode": "^1.60.0"
     },
     "categories": [
         "Programming Languages"
